@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -48,10 +51,17 @@ dependencies {
     //DataStore
     val dataStoreVersion = "1.0.0"
     implementation("androidx.datastore:datastore-preferences:$dataStoreVersion")
-    
+
     //Kotlin Coroutine
     val coroutineVersion = "1.8.0"
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutineVersion")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutineVersion")
+
+    //ViewModel
+    val viewModelVersion = "2.7.0"
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:$viewModelVersion")
+
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.4.0")
+
 
 }
